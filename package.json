@@ -4,21 +4,24 @@
 	"description": "Splitter for main tags on vue files",
 	"version": "0.0.1",
 	"engines": {
-		"vscode": "^1.31.0"
+		"vscode": "^1.32.0"
 	},
 	"categories": [
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.truco"
+		"onCommand:extension.vueSplit"
 	],
-	"main": "./extension.js",
+	"main": "./src/extension.js",
 	"contributes": {
 		"commands": [{
-      "command": "extension.truco",
+      "command": "extension.vueSplit",
 			"title": "VSTV Vue Split Vertical"
 		}]
 	},
+	"languages": [
+		{ "id" : "vue", "extensions": [".vue"], "aliases": ["Vue", "vue", "vueJS", "vuejs", "VueJS", "Vuejs"]}
+	],
 	"scripts": {
 		"postinstall": "node ./node_modules/vscode/bin/install",
 		"test": "node ./node_modules/vscode/bin/test"
